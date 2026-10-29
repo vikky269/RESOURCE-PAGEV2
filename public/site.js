@@ -21,9 +21,11 @@
   if(!reduce.matches&&!paused&&'IntersectionObserver' in window){
     const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{
       if(entry.isIntersecting){entry.target.dataset.revealState='visible';observer.unobserve(entry.target);}
-    }),{threshold:0.08});
+    }),{threshold:0.08,rootMargin:'0px 0px -6% 0px'});
     document.querySelectorAll('[data-reveal]').forEach(section=>{section.dataset.revealState='waiting';observer.observe(section);});
   }
+  // Kick hero entrance after first paint so CSS delays feel intentional.
+  requestAnimationFrame(()=>document.documentElement.classList.add('hero-ready'));
   const toggle=document.querySelector('#mobile-toggle'), menu=document.querySelector('#mobile-nav');
   function closeMenu(){if(!toggle||!menu)return;menu.hidden=true;toggle.setAttribute('aria-expanded','false');toggle.setAttribute('aria-label','Open navigation');}
   toggle?.addEventListener('click',()=>{const open=toggle.getAttribute('aria-expanded')==='true';menu.hidden=open;toggle.setAttribute('aria-expanded',String(!open));toggle.setAttribute('aria-label',open?'Open navigation':'Close navigation');});

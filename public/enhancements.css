@@ -14,3 +14,61 @@
 .cursor-ring.is-active{width:46px;height:46px;background:rgba(35,74,54,.12);border-color:rgba(35,74,54,.4)}
 @media (hover:none),(pointer:coarse),(prefers-reduced-motion:reduce){.cursor-ring{display:none!important}}
 html.motion-paused .cursor-ring{display:none!important}
+
+/* Extra page motion — hierarchy and presence, paused with the site toggle. */
+.motion-on.hero-ready .hero-enter{animation:hero-rise .7s cubic-bezier(.2,.7,.2,1) both;animation-delay:calc(var(--enter,0)*.11s)}
+.motion-on .headline-star{animation:star-arrive .9s .3s both,star-twinkle 3.8s 1.2s ease-in-out infinite}
+.motion-on .tiny-star{display:inline-block;animation:star-twinkle 2.8s ease-in-out infinite}
+.motion-on .art-orbit.orbit-one{animation:orbit-spin-a 28s linear infinite}
+.motion-on .art-orbit.orbit-two{animation:orbit-spin-b 36s linear infinite}
+.motion-on .art-caption{animation:hero-rise .7s .35s both}
+.motion-on .art-word{animation:word-drift 8s ease-in-out infinite}
+.motion-on .doodle-path path{stroke-dasharray:8 10;animation:dash-crawl 14s linear infinite}
+.motion-on .status-dot{animation:dot-pulse 2.2s ease-in-out infinite}
+.motion-on .closing-star{display:inline-block;animation:star-spin 10s linear infinite}
+.motion-on .primary{position:relative;overflow:hidden}
+.motion-on .primary:hover{box-shadow:0 10px 24px #234a3622}
+.motion-on .search-bar{transition:transform .25s ease,box-shadow .25s ease}
+.motion-on .search-bar:focus-within{transform:translateY(-2px);box-shadow:0 10px 28px #314a2214}
+.motion-on .category-tab{transition:transform .2s ease,background .2s,border-color .2s}
+.motion-on .category-tab:hover{transform:translateY(-2px)}
+.motion-on .resource-card{animation:card-in .5s both}
+.motion-on .resource-grid .resource-card:nth-child(1){animation-delay:0ms}
+.motion-on .resource-grid .resource-card:nth-child(2){animation-delay:45ms}
+.motion-on .resource-grid .resource-card:nth-child(3){animation-delay:90ms}
+.motion-on .resource-grid .resource-card:nth-child(4){animation-delay:135ms}
+.motion-on .resource-grid .resource-card:nth-child(5){animation-delay:180ms}
+.motion-on .resource-grid .resource-card:nth-child(6){animation-delay:225ms}
+.motion-on [data-reveal-state=visible] .section-heading>div,
+.motion-on [data-reveal-state=visible] .section-heading>p,
+.motion-on [data-reveal-state=visible] .path-intro,
+.motion-on [data-reveal-state=visible] .path-checklist,
+.motion-on [data-reveal-state=visible] .teaser-copy,
+.motion-on [data-reveal-state=visible] .teaser-art{animation:hero-rise .7s cubic-bezier(.2,.7,.2,1) both}
+.motion-on [data-reveal-state=visible] .section-heading>p{animation-delay:.12s}
+.motion-on [data-reveal-state=visible] .path-checklist{animation-delay:.14s}
+.motion-on [data-reveal-state=visible] .teaser-copy{animation-delay:.1s}
+.possibility-strip{overflow:hidden}
+.strip-track{display:flex;width:max-content;align-items:center}
+.possibility-strip .strip-inner{display:flex;align-items:center;gap:26px;min-height:61px;padding-inline:28px;font-size:10px;letter-spacing:1.8px;color:#5e7052;white-space:nowrap;justify-content:flex-start;width:max-content}
+.possibility-strip .strip-inner b{font-size:25px;color:#8ba94c;font-weight:400}
+.motion-on .strip-track{animation:strip-marquee 28s linear infinite}
+.motion-on .career-card{animation:card-in .45s both}
+.motion-on .interest-options button{transition:transform .2s ease,background .2s,border-color .2s}
+.motion-on .interest-options button:hover{transform:translateY(-2px)}
+.motion-on .scene-card{animation:subtle-float 7s ease-in-out infinite}
+@keyframes hero-rise{from{opacity:0;translate:0 18px}to{opacity:1;translate:0 0}}
+@keyframes star-twinkle{0%,100%{opacity:1;scale:1}50%{opacity:.72;scale:1.08}}
+@keyframes orbit-spin-a{from{transform:rotate(-39deg)}to{transform:rotate(321deg)}}
+@keyframes orbit-spin-b{from{transform:rotate(42deg)}to{transform:rotate(-318deg)}}
+@keyframes word-drift{0%,100%{transform:rotate(-12deg) translateY(0)}50%{transform:rotate(-10deg) translateY(-6px)}}
+@keyframes dash-crawl{to{stroke-dashoffset:-120}}
+@keyframes dot-pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.45;transform:scale(1.35)}}
+@keyframes star-spin{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
+@keyframes strip-marquee{to{transform:translateX(-50%)}}
+@media(max-width:740px){
+  .possibility-strip .strip-inner{min-height:50px;gap:24px;font-size:8px;letter-spacing:1px}
+  .possibility-strip .strip-inner b{font-size:22px}
+  .motion-on .art-orbit.orbit-one{animation-duration:40s}
+  .motion-on .art-orbit.orbit-two{animation-duration:48s}
+}
