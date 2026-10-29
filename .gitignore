@@ -1,0 +1,9 @@
+node_modules/
+dist/
+.netlify/
+.env
+.env.*
+!.env.example
+*.local.json
+data/runtime-config.json
+data/asset-manifest.json

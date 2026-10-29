@@ -1,0 +1,662 @@
+{
+  "revision": 2,
+  "updatedAt": "2026-10-29T11:19:56.794Z",
+  "lastRun": {
+    "id": "regional-feed-schedule-linked-20261029",
+    "completedAt": "2026-10-29T11:19:56.794Z",
+    "status": "success",
+    "sourcesChecked": 15,
+    "notes": "Initial official-source review complete; daily follow-up schedule saved and enabled."
+  },
+  "automation": {
+    "enabled": false,
+    "timezone": "Africa/Lagos",
+    "schedule": null,
+    "id": null
+  },
+  "records": [
+    {
+      "id": "umd-fall-2027-early-action",
+      "title": "UMD first-year early action",
+      "category": "college-applications",
+      "provider": "University of Maryland",
+      "region": "MD",
+      "states": [
+        "MD"
+      ],
+      "location": "College Park, MD",
+      "summary": "Prepare a complete first-year application for UMD’s non-binding early-action review.",
+      "audience": "High school seniors",
+      "eligibility": [
+        "First-year applicants for fall enrollment.",
+        "All required materials must be submitted by the applicable deadline."
+      ],
+      "description": [
+        "Prepare a complete first-year application for UMD’s non-binding early-action review.",
+        "UMD lists November 1 in the year before fall enrollment as its early-action date. Its regular deadline is January 20; confirm the intended entry term."
+      ],
+      "howToApply": [
+        "Review UMD’s first-year requirements.",
+        "Submit through Common App or ApplyWeb.",
+        "Confirm receipt of supporting materials in the applicant portal."
+      ],
+      "applyUrl": "https://admissions.umd.edu/apply/application-deadlines",
+      "sourceUrl": "https://admissions.umd.edu/apply/application-deadlines",
+      "deadlineDate": "2026-11-01",
+      "deadlineAt": null,
+      "deadlineKind": "application",
+      "deadlineNote": "UMD lists November 1 in the year before fall enrollment as its early-action date. Its regular deadline is January 20; confirm the intended entry term.",
+      "opensOn": null,
+      "status": "open",
+      "eventDate": null,
+      "format": "Online application",
+      "cycle": "2027",
+      "verified": true,
+      "lastVerifiedAt": "2026-10-29T11:05:16Z",
+      "verificationNote": "Reviewed official provider guidance; eligibility and cycle limits are stated in the listing."
+    },
+    {
+      "id": "suny-free-app-2026",
+      "title": "SUNY free application window",
+      "category": "college-applications",
+      "provider": "SUNY",
+      "region": "NY",
+      "states": [
+        "NY"
+      ],
+      "location": "New York State",
+      "summary": "Explore SUNY campuses and apply to up to five schools during the published fee-free application window.",
+      "audience": "Prospective SUNY applicants",
+      "eligibility": [
+        "Review campus and programme admission requirements.",
+        "The fee-free window is separate from individual campus admission deadlines."
+      ],
+      "description": [
+        "Explore SUNY campuses and apply to up to five schools during the published fee-free application window.",
+        "Fee-free applications are listed for October 19–November 2. November 2 is the end of this promotion, not a universal SUNY admission deadline."
+      ],
+      "howToApply": [
+        "Build a SUNY campus shortlist.",
+        "Check campus-specific requirements and dates.",
+        "Follow the official fee-waiver instructions before the window closes."
+      ],
+      "applyUrl": "https://www.suny.edu/attend/apply-to-suny/",
+      "sourceUrl": "https://www.suny.edu/attend/apply-to-suny/",
+      "deadlineDate": "2026-11-02",
+      "deadlineAt": null,
+      "deadlineKind": "promotion",
+      "deadlineNote": "Fee-free applications are listed for October 19–November 2. November 2 is the end of this promotion, not a universal SUNY admission deadline.",
+      "opensOn": null,
+      "status": "open",
+      "eventDate": null,
+      "format": "Online application",
+      "cycle": "2026 application promotion",
+      "verified": true,
+      "lastVerifiedAt": "2026-10-29T11:05:16Z",
+      "verificationNote": "Reviewed official provider guidance; eligibility and cycle limits are stated in the listing."
+    },
+    {
+      "id": "wise-spring-2027",
+      "title": "WISE engineering internship · spring",
+      "category": "internships",
+      "provider": "Johns Hopkins Engineering",
+      "region": "MD",
+      "states": [
+        "MD"
+      ],
+      "location": "Baltimore, MD",
+      "summary": "Explore science and engineering through a mentored programme for eligible Baltimore City public high school students.",
+      "audience": "Baltimore City public high school students",
+      "eligibility": [
+        "Attend a Baltimore City public high school.",
+        "Meet the published mathematics and science grade criteria.",
+        "Be available for the programme and arrange transportation."
+      ],
+      "description": [
+        "Explore science and engineering through a mentored programme for eligible Baltimore City public high school students.",
+        "The provider publishes a spring application deadline of 11:59 p.m. on November 15, 2026. Confirm the provider’s local time and ensure school-submitted materials arrive too."
+      ],
+      "howToApply": [
+        "Complete the WISE application.",
+        "Ask your school to send your transcript.",
+        "Request the required STEM teacher or counsellor recommendation."
+      ],
+      "applyUrl": "https://engineering.jhu.edu/outreach/ceo-programs/wise/wise-application/",
+      "sourceUrl": "https://engineering.jhu.edu/outreach/ceo-programs/wise/wise-application/",
+      "deadlineDate": "2026-11-15",
+      "deadlineAt": null,
+      "deadlineKind": "application",
+      "deadlineNote": "The provider publishes a spring application deadline of 11:59 p.m. on November 15, 2026. Confirm the provider’s local time and ensure school-submitted materials arrive too.",
+      "opensOn": null,
+      "status": "open",
+      "eventDate": null,
+      "format": "Online application",
+      "cycle": "2027",
+      "verified": true,
+      "lastVerifiedAt": "2026-10-29T11:05:16Z",
+      "verificationNote": "Reviewed official provider guidance; eligibility and cycle limits are stated in the listing."
+    },
+    {
+      "id": "masc-fall-leadership-2026",
+      "title": "Maryland Fall Leadership Conference",
+      "category": "conferences",
+      "provider": "Maryland Association of Student Councils",
+      "region": "MD",
+      "states": [
+        "MD"
+      ],
+      "location": "Aberdeen, Harford County, MD",
+      "summary": "Join secondary student leaders for workshops and activities at the state’s Fall Leadership Conference.",
+      "audience": "Maryland secondary school students",
+      "eligibility": [
+        "Registration must be handled by a school advisor or administrator.",
+        "An authorised school advisor must attend with the delegation."
+      ],
+      "description": [
+        "Join secondary student leaders for workshops and activities at the state’s Fall Leadership Conference.",
+        "The event is November 21, 2026. November 4 is the registration deadline; the signed invoice has a separate November 9 deadline."
+      ],
+      "howToApply": [
+        "Speak with your student-council or school advisor.",
+        "Review the conference and registration information together.",
+        "Have the advisor register the school delegation."
+      ],
+      "applyUrl": "https://mdstudentcouncils.org/index.php/fall-leadership-conference/",
+      "sourceUrl": "https://mdstudentcouncils.org/index.php/fall-leadership-conference/",
+      "deadlineDate": "2026-11-04",
+      "deadlineAt": null,
+      "deadlineKind": "registration",
+      "deadlineNote": "The event is November 21, 2026. November 4 is the registration deadline; the signed invoice has a separate November 9 deadline.",
+      "opensOn": null,
+      "status": "open",
+      "eventDate": "2026-11-21",
+      "format": "In person",
+      "cycle": "Fall 2026",
+      "verified": true,
+      "lastVerifiedAt": "2026-10-29T11:05:16Z",
+      "verificationNote": "Reviewed official provider guidance; eligibility and cycle limits are stated in the listing."
+    },
+    {
+      "id": "nac-sun-2027",
+      "title": "Student Urban Nature internship",
+      "category": "internships",
+      "provider": "Natural Areas Conservancy",
+      "region": "NY",
+      "states": [
+        "NY"
+      ],
+      "location": "Queens & Staten Island, NYC",
+      "summary": "Explore urban ecology, field research and environmental stewardship through the SUN high school programme.",
+      "audience": "Rising high school juniors and seniors",
+      "eligibility": [
+        "Be an NYC resident attending school in Queens or Staten Island.",
+        "Meet the provider’s commuting-distance requirement.",
+        "Be at least 16 by July 1 of the programme year."
+      ],
+      "description": [
+        "Explore urban ecology, field research and environmental stewardship through the SUN high school programme.",
+        "Applications are scheduled to open November 2 and close December 11, 2026. This is an upcoming window, not an application currently open on October 29."
+      ],
+      "howToApply": [
+        "Review the 2027 intern description.",
+        "Check the specific school, location and age requirements.",
+        "Apply during the published application window."
+      ],
+      "applyUrl": "https://naturalareasnyc.org/high-school-internship/",
+      "sourceUrl": "https://naturalareasnyc.org/high-school-internship/",
+      "deadlineDate": "2026-12-11",
+      "deadlineAt": null,
+      "deadlineKind": "application",
+      "deadlineNote": "Applications are scheduled to open November 2 and close December 11, 2026. This is an upcoming window, not an application currently open on October 29.",
+      "opensOn": "2026-11-02",
+      "status": "upcoming",
+      "eventDate": null,
+      "format": "Online application",
+      "cycle": "2027",
+      "verified": true,
+      "lastVerifiedAt": "2026-10-29T11:05:16Z",
+      "verificationNote": "Reviewed official provider guidance; eligibility and cycle limits are stated in the listing."
+    },
+    {
+      "id": "ny-sae-2027",
+      "title": "NYS Scholarships for Academic Excellence",
+      "category": "scholarship-applications",
+      "provider": "New York State Education Department",
+      "region": "NY",
+      "states": [
+        "NY"
+      ],
+      "location": "New York State",
+      "summary": "Learn about a state scholarship awarded through high school nominations for study at eligible New York colleges.",
+      "audience": "Eligible NY high school students",
+      "eligibility": [
+        "Your high school must nominate you.",
+        "The scholarship must be used at an eligible New York college or university.",
+        "Review residency, academic and funding conditions with your school."
+      ],
+      "description": [
+        "Learn about a state scholarship awarded through high school nominations for study at eligible New York colleges.",
+        "February 26, 2027 is the school’s submission deadline. Students do not submit the nomination themselves; school deadlines may be earlier."
+      ],
+      "howToApply": [
+        "Ask your school counsellor about nomination eligibility.",
+        "Check your school’s earlier internal deadline.",
+        "Have the school complete the official nomination process."
+      ],
+      "applyUrl": "https://www.nysed.gov/postsecondary-services/scholarships-academic-excellence-sae",
+      "sourceUrl": "https://www.nysed.gov/postsecondary-services/scholarships-academic-excellence-sae",
+      "deadlineDate": "2027-02-26",
+      "deadlineAt": null,
+      "deadlineKind": "nomination",
+      "deadlineNote": "February 26, 2027 is the school’s submission deadline. Students do not submit the nomination themselves; school deadlines may be earlier.",
+      "opensOn": null,
+      "status": "open",
+      "eventDate": null,
+      "format": "Online application",
+      "cycle": "2027",
+      "verified": true,
+      "lastVerifiedAt": "2026-10-29T11:05:16Z",
+      "verificationNote": "Reviewed official provider guidance; eligibility and cycle limits are stated in the listing."
+    },
+    {
+      "id": "hopkins-summer-jobs-2027",
+      "title": "Johns Hopkins Summer Jobs",
+      "category": "internships",
+      "provider": "Johns Hopkins Medicine",
+      "region": "MD",
+      "states": [
+        "MD"
+      ],
+      "location": "Baltimore City & County, MD",
+      "summary": "Plan ahead for a paid summer work programme with Johns Hopkins departments.",
+      "audience": "Ages 16–21; Baltimore eligibility applies",
+      "eligibility": [
+        "Be 16–21 by the programme start.",
+        "Baltimore placements require Baltimore City or County residency.",
+        "Baltimore City applicants must follow the YouthWorks application route."
+      ],
+      "description": [
+        "Plan ahead for a paid summer work programme with Johns Hopkins departments.",
+        "The published 2027 application period is January 4–February 14. Maryland/DC placements are listed for June 21–August 6."
+      ],
+      "howToApply": [
+        "Review the programme’s location-specific rules.",
+        "Use the interest form if you want provider updates.",
+        "Follow the official application route when the window opens."
+      ],
+      "applyUrl": "https://www.hopkinsmedicine.org/human-resources/learning-development/youth/summer-jobs/application",
+      "sourceUrl": "https://www.hopkinsmedicine.org/human-resources/learning-development/youth/summer-jobs/application",
+      "deadlineDate": "2027-02-14",
+      "deadlineAt": null,
+      "deadlineKind": "application",
+      "deadlineNote": "The published 2027 application period is January 4–February 14. Maryland/DC placements are listed for June 21–August 6.",
+      "opensOn": "2027-01-04",
+      "status": "upcoming",
+      "eventDate": null,
+      "format": "Online application",
+      "cycle": "2027",
+      "verified": true,
+      "lastVerifiedAt": "2026-10-29T11:05:16Z",
+      "verificationNote": "Reviewed official provider guidance; eligibility and cycle limits are stated in the listing."
+    },
+    {
+      "id": "suny-first-year-pathway-2027",
+      "title": "Find your SUNY college pathway",
+      "category": "college-applications",
+      "provider": "SUNY",
+      "region": "NY",
+      "states": [
+        "NY"
+      ],
+      "location": "New York State",
+      "summary": "Compare public-college options and learn how the applySUNY process works.",
+      "audience": "First-year college applicants",
+      "eligibility": [
+        "Review each campus’s programme and admission requirements.",
+        "Some campuses and programmes have separate early-action or portfolio dates."
+      ],
+      "description": [
+        "Compare public-college options and learn how the applySUNY process works.",
+        "There is no single SUNY freshman deadline. SUNY recommends applying by December 1, while early-action and special-programme deadlines vary. This recommendation is not displayed as a hard deadline."
+      ],
+      "howToApply": [
+        "Shortlist campuses and courses.",
+        "Record each campus’s actual deadline.",
+        "Complete the application and campus supplements."
+      ],
+      "applyUrl": "https://www.suny.edu/attend/apply-to-suny/",
+      "sourceUrl": "https://www.suny.edu/attend/apply-to-suny/",
+      "deadlineDate": null,
+      "deadlineAt": null,
+      "deadlineKind": "varies",
+      "deadlineNote": "There is no single SUNY freshman deadline. SUNY recommends applying by December 1, while early-action and special-programme deadlines vary. This recommendation is not displayed as a hard deadline.",
+      "opensOn": null,
+      "status": "open",
+      "eventDate": null,
+      "format": "Online application",
+      "cycle": "2027",
+      "verified": true,
+      "lastVerifiedAt": "2026-10-29T11:05:16Z",
+      "verificationNote": "Reviewed official provider guidance; eligibility and cycle limits are stated in the listing."
+    },
+    {
+      "id": "cuny-first-year-pathway-2027",
+      "title": "Your CUNY first-year application",
+      "category": "college-applications",
+      "provider": "CUNY",
+      "region": "NY",
+      "states": [
+        "NY"
+      ],
+      "location": "New York City, NY",
+      "summary": "Explore CUNY colleges and the first-year application and supporting-document process.",
+      "audience": "College applicants",
+      "eligibility": [
+        "Use the correct applicant category: U.S.-educated or international.",
+        "Check campus and programme-specific requirements."
+      ],
+      "description": [
+        "Explore CUNY colleges and the first-year application and supporting-document process.",
+        "The provider lists February 1 as the fall priority date for U.S.-educated applicants, with different international dates. Confirm the year, campus and programme before relying on a deadline."
+      ],
+      "howToApply": [
+        "Review the official applicant instructions.",
+        "Confirm the deadline for your entry term and applicant type.",
+        "Submit your application and all supporting materials."
+      ],
+      "applyUrl": "https://www.cuny.edu/admissions/undergraduate/apply/",
+      "sourceUrl": "https://www.cuny.edu/admissions/undergraduate/apply/",
+      "deadlineDate": null,
+      "deadlineAt": null,
+      "deadlineKind": "varies",
+      "deadlineNote": "The provider lists February 1 as the fall priority date for U.S.-educated applicants, with different international dates. Confirm the year, campus and programme before relying on a deadline.",
+      "opensOn": null,
+      "status": "open",
+      "eventDate": null,
+      "format": "Online application",
+      "cycle": "2027",
+      "verified": true,
+      "lastVerifiedAt": "2026-10-29T11:05:16Z",
+      "verificationNote": "Reviewed official provider guidance; eligibility and cycle limits are stated in the listing."
+    },
+    {
+      "id": "umd-hip-2027",
+      "title": "UMD high school research internship",
+      "category": "internships",
+      "provider": "UMD Geographical Sciences",
+      "region": "MD",
+      "states": [
+        "MD"
+      ],
+      "location": "College Park, MD",
+      "summary": "Watch for the 2027 High School Internship Program and explore geography-related research.",
+      "audience": "High school students; check programme rules",
+      "eligibility": [
+        "Review the programme’s student and participation requirements when the new application is released."
+      ],
+      "description": [
+        "Watch for the 2027 High School Internship Program and explore geography-related research.",
+        "The department says summer 2027 applications will open in early 2027. An exact opening day and deadline have not been published on the reviewed page."
+      ],
+      "howToApply": [
+        "Read the official programme information.",
+        "Watch for the 2027 application release.",
+        "Check the updated deadline and eligibility before applying."
+      ],
+      "applyUrl": "https://geog.umd.edu/high-school-hub/high-school-internship-program-hip",
+      "sourceUrl": "https://geog.umd.edu/high-school-hub/high-school-internship-program-hip",
+      "deadlineDate": null,
+      "deadlineAt": null,
+      "deadlineKind": "unannounced",
+      "deadlineNote": "The department says summer 2027 applications will open in early 2027. An exact opening day and deadline have not been published on the reviewed page.",
+      "opensOn": null,
+      "status": "upcoming",
+      "eventDate": null,
+      "format": "Online application",
+      "cycle": "2027",
+      "verified": true,
+      "lastVerifiedAt": "2026-10-29T11:05:16Z",
+      "verificationNote": "Reviewed official provider guidance; eligibility and cycle limits are stated in the listing."
+    },
+    {
+      "id": "ny-tap-2027-28",
+      "title": "New York TAP · 2027–28",
+      "category": "scholarship-applications",
+      "provider": "New York HESC / SUNY",
+      "region": "NY",
+      "states": [
+        "NY"
+      ],
+      "location": "New York State",
+      "summary": "Explore New York tuition assistance for the 2027–28 academic year.",
+      "audience": "Eligible NY college students and applicants",
+      "eligibility": [
+        "Review New York residency or alternative eligibility pathways.",
+        "Attend an approved institution and meet financial and academic requirements."
+      ],
+      "description": [
+        "Explore New York tuition assistance for the 2027–28 academic year.",
+        "The official SUNY release states June 30, 2028 for the 2027–28 TAP application. Earlier college and state-aid priority deadlines may still apply."
+      ],
+      "howToApply": [
+        "Use HESC’s programme guidance to check eligibility.",
+        "Complete the appropriate FAFSA or state-aid pathway.",
+        "Select the correct academic year and track your application."
+      ],
+      "applyUrl": "https://www.suny.edu/suny-news/press-releases/10-26/10-13-26-2/",
+      "sourceUrl": "https://www.suny.edu/suny-news/press-releases/10-26/10-13-26-2/",
+      "deadlineDate": "2028-06-30",
+      "deadlineAt": null,
+      "deadlineKind": "application",
+      "deadlineNote": "The official SUNY release states June 30, 2028 for the 2027–28 TAP application. Earlier college and state-aid priority deadlines may still apply.",
+      "opensOn": null,
+      "status": "open",
+      "eventDate": null,
+      "format": "Online application",
+      "cycle": "2027–28 academic year",
+      "verified": true,
+      "lastVerifiedAt": "2026-10-29T11:05:16Z",
+      "verificationNote": "Reviewed official provider guidance; eligibility and cycle limits are stated in the listing."
+    },
+    {
+      "id": "maryland-state-aid-2027-28",
+      "title": "Maryland state aid · 2027–28",
+      "category": "scholarship-applications",
+      "provider": "Maryland Higher Education Commission",
+      "region": "MD",
+      "states": [
+        "MD"
+      ],
+      "location": "Maryland",
+      "summary": "Watch the transition to Maryland’s new financial-aid system and review state grants and scholarships.",
+      "audience": "Eligible Maryland students",
+      "eligibility": [
+        "Programme-specific residency, enrollment and financial criteria apply.",
+        "New applicants must follow the current MHEC instructions for the new system."
+      ],
+      "description": [
+        "Watch the transition to Maryland’s new financial-aid system and review state grants and scholarships.",
+        "MHEC says first-time applicants should wait for the MDSIS launch in January 2027 for 2027–28 state aid. Do not infer a new-cycle deadline from older grant pages."
+      ],
+      "howToApply": [
+        "Review MHEC’s current applicant notice.",
+        "Prepare financial-aid information with a parent or counsellor where needed.",
+        "Follow instructions for MDSIS when the new system launches."
+      ],
+      "applyUrl": "https://mhec.maryland.gov/Pages/default.aspx",
+      "sourceUrl": "https://mhec.maryland.gov/Pages/default.aspx",
+      "deadlineDate": null,
+      "deadlineAt": null,
+      "deadlineKind": "unannounced",
+      "deadlineNote": "MHEC says first-time applicants should wait for the MDSIS launch in January 2027 for 2027–28 state aid. Do not infer a new-cycle deadline from older grant pages.",
+      "opensOn": null,
+      "status": "upcoming",
+      "eventDate": null,
+      "format": "Online application",
+      "cycle": "2027–28 academic year",
+      "verified": true,
+      "lastVerifiedAt": "2026-10-29T11:05:16Z",
+      "verificationNote": "Reviewed official provider guidance; eligibility and cycle limits are stated in the listing."
+    },
+    {
+      "id": "ualbany-symposium-2027",
+      "title": "UAlbany high school research symposium",
+      "category": "conferences",
+      "provider": "University at Albany",
+      "region": "NY",
+      "states": [
+        "NY"
+      ],
+      "location": "Albany, NY",
+      "summary": "Explore a research symposium for students in the UAlbany in the High School science research programme.",
+      "audience": "Eligible UHS science research students",
+      "eligibility": [
+        "Presenters must be registered for the listed UHS ACAS research courses.",
+        "Teachers nominate students; only a limited number may apply per school."
+      ],
+      "description": [
+        "Explore a research symposium for students in the UAlbany in the High School science research programme.",
+        "The symposium is April 16, 2027. March 5 is the presenter application deadline, not a general visitor registration deadline."
+      ],
+      "howToApply": [
+        "Discuss eligibility and nomination with your research teacher.",
+        "Review the presenter instructions.",
+        "Submit the required presenter materials by the published date."
+      ],
+      "applyUrl": "https://www.albany.edu/uhs/science-research-program/ualbany-in-the-high-school-science-research-symposium",
+      "sourceUrl": "https://www.albany.edu/uhs/science-research-program/ualbany-in-the-high-school-science-research-symposium",
+      "deadlineDate": "2027-03-05",
+      "deadlineAt": null,
+      "deadlineKind": "nomination",
+      "deadlineNote": "The symposium is April 16, 2027. March 5 is the presenter application deadline, not a general visitor registration deadline.",
+      "opensOn": null,
+      "status": "open",
+      "eventDate": "2027-04-16",
+      "format": "In person",
+      "cycle": "2027",
+      "verified": true,
+      "lastVerifiedAt": "2026-10-29T11:05:16Z",
+      "verificationNote": "Reviewed official provider guidance; eligibility and cycle limits are stated in the listing."
+    },
+    {
+      "id": "maryland-stem-festival-2026",
+      "title": "Maryland STEM Festival events",
+      "category": "conferences",
+      "provider": "Maryland STEM Festival",
+      "region": "MD",
+      "states": [
+        "MD"
+      ],
+      "location": "Across Maryland",
+      "summary": "Browse hands-on STEM events taking place across the state during the 2026 festival.",
+      "audience": "Students and families; event rules vary",
+      "eligibility": [
+        "Check age, location, cost and registration requirements for each individual event."
+      ],
+      "description": [
+        "Browse hands-on STEM events taking place across the state during the 2026 festival.",
+        "The festival runs October 16–November 15, 2026. November 15 is the festival end date, not a universal registration deadline."
+      ],
+      "howToApply": [
+        "Open the official event calendar.",
+        "Choose an event that fits your location and age.",
+        "Check that event’s own registration instructions."
+      ],
+      "applyUrl": "https://marylandstemfestival.org/find-events/",
+      "sourceUrl": "https://marylandstemfestival.org/find-events/",
+      "deadlineDate": null,
+      "deadlineAt": null,
+      "deadlineKind": "event",
+      "deadlineNote": "The festival runs October 16–November 15, 2026. November 15 is the festival end date, not a universal registration deadline.",
+      "opensOn": null,
+      "status": "open",
+      "eventDate": "2026-11-15",
+      "format": "In person",
+      "cycle": "2026 festival",
+      "verified": true,
+      "lastVerifiedAt": "2026-10-29T11:05:16Z",
+      "verificationNote": "Reviewed official provider guidance; eligibility and cycle limits are stated in the listing."
+    },
+    {
+      "id": "2fe93705-28f5-4c3a-ae70-d826e63274fc",
+      "category": "college-applications",
+      "region": "National",
+      "deadlineDate": null,
+      "description": [
+        "Use the Common App to explore colleges and organize your first-year applications. Each college sets its own deadlines, fees and requirements."
+      ],
+      "eligibility": [
+        "First-year college applicants.",
+        "Review each college’s admission and testing requirements."
+      ],
+      "howToApply": [
+        "Create your Common App account and build a college list.",
+        "Gather school records and check essay and recommendation requirements.",
+        "Review the deadline for every college before submitting."
+      ],
+      "applyUrl": "https://www.commonapp.org/apply/first-year-students/",
+      "title": "Your college journey, simplified",
+      "provider": "Common App",
+      "summary": "Explore colleges, organize requirements and start your first-year application in one place.",
+      "format": "Online",
+      "audience": "College applicants",
+      "verified": true,
+      "states": [
+        "NY",
+        "MD"
+      ],
+      "location": "United States · eligibility varies",
+      "sourceUrl": "https://www.commonapp.org/apply/first-year-students/",
+      "deadlineKind": "varies",
+      "deadlineAt": null,
+      "deadlineNote": "Confirm individual college dates.",
+      "opensOn": null,
+      "status": "open",
+      "eventDate": null,
+      "lastVerifiedAt": "2026-10-29T11:05:16Z",
+      "verificationNote": "Reviewed official national provider guidance.",
+      "cycle": "Varies by college"
+    },
+    {
+      "id": "b5d43c3a-e4d5-4764-96e4-d4d7f9847eac",
+      "category": "internships",
+      "region": "National",
+      "deadlineDate": "2027-03-01",
+      "description": [
+        "Explore paid, project-based placements with NASA’s Office of STEM Engagement. The Summer 2027 application deadline is 1 March 2027 at 11:59 p.m. ET."
+      ],
+      "eligibility": [
+        "U.S. citizenship and age 18 or older by the session start.",
+        "Minimum cumulative GPA of 3.0 on a 4.0 scale.",
+        "Enrolled college students, or high school seniors applying for the summer immediately after graduation; review the official enrollment rules."
+      ],
+      "howToApply": [
+        "Review the current NASA program requirements.",
+        "Create or update your NASA STEM Gateway profile.",
+        "Find suitable projects and complete the required application fields."
+      ],
+      "applyUrl": "https://www.nasa.gov/learning-resources/internship-programs/",
+      "title": "NASA OSTEM Internships",
+      "provider": "NASA",
+      "summary": "Turn curiosity into experience. Work on NASA projects alongside agency mentors.",
+      "format": "Varies by project",
+      "audience": "18+ · U.S. citizens",
+      "verified": true,
+      "states": [
+        "NY",
+        "MD"
+      ],
+      "location": "United States · eligibility varies",
+      "sourceUrl": "https://www.nasa.gov/learning-resources/internship-programs/",
+      "deadlineKind": "application",
+      "deadlineAt": null,
+      "deadlineNote": "Summer 2027 deadline: March 1, 2027 at 11:59 p.m. Eastern Time. U.S. citizenship and age 18 by the session start are among the requirements.",
+      "opensOn": null,
+      "status": "open",
+      "eventDate": null,
+      "lastVerifiedAt": "2026-10-29T11:05:16Z",
+      "verificationNote": "Reviewed official national provider guidance.",
+      "cycle": "2027"
+    }
+  ]
+}

@@ -1,0 +1,571 @@
+[
+  {
+    "id": "software-developer",
+    "title": "Software developer",
+    "field": "technology",
+    "icon": "code",
+    "summary": "Turn an idea into an app, website or system that helps people do something better.",
+    "interests": [
+      "solve",
+      "build",
+      "create"
+    ],
+    "subjects": [
+      "Mathematics",
+      "Computing",
+      "English"
+    ],
+    "skills": [
+      "Logical thinking",
+      "Problem solving",
+      "Teamwork"
+    ],
+    "tasks": [
+      "Understand a user’s problem and plan a solution.",
+      "Write, review and test software with a team.",
+      "Improve a product after people start using it."
+    ],
+    "route": "Explore computing or a related degree, build a portfolio of projects, and investigate internships. Entry routes differ by employer.",
+    "activity": "Sketch an app that solves one problem at school. Draw three screens, then build one in Scratch or HTML.",
+    "question": "What would you build if you could solve one everyday frustration?",
+    "source": "https://www.bls.gov/ooh/computer-and-information-technology/software-developers.htm",
+    "resourceQuery": "STEM"
+  },
+  {
+    "id": "nurse",
+    "title": "Registered nurse",
+    "field": "health",
+    "icon": "heart",
+    "summary": "Support people through illness and recovery, combining science with careful, compassionate care.",
+    "interests": [
+      "help",
+      "solve"
+    ],
+    "subjects": [
+      "Biology",
+      "Chemistry",
+      "Mathematics"
+    ],
+    "skills": [
+      "Empathy",
+      "Observation",
+      "Clear communication"
+    ],
+    "tasks": [
+      "Monitor a patient’s condition and keep accurate records.",
+      "Deliver care and coordinate with other healthcare professionals.",
+      "Help patients and families understand their care."
+    ],
+    "route": "Investigate an approved nursing programme, supervised clinical learning and the registration or licensing rules where you want to work.",
+    "activity": "Create a plain-language poster explaining the importance of handwashing, using a trusted public-health source.",
+    "question": "How would you help someone feel heard when they are worried?",
+    "source": "https://www.bls.gov/ooh/healthcare/registered-nurses.htm",
+    "resourceQuery": "college"
+  },
+  {
+    "id": "graphic-designer",
+    "title": "Graphic designer",
+    "field": "creative",
+    "icon": "palette",
+    "summary": "Use images, colour and typography to make a message clear, memorable and engaging.",
+    "interests": [
+      "create",
+      "solve"
+    ],
+    "subjects": [
+      "Art & design",
+      "English",
+      "Computing"
+    ],
+    "skills": [
+      "Visual communication",
+      "Creativity",
+      "Listening to feedback"
+    ],
+    "tasks": [
+      "Understand the message and audience behind a brief.",
+      "Develop layouts, illustrations and visual identities.",
+      "Present ideas and refine designs after feedback."
+    ],
+    "route": "Explore design education and build a portfolio showing how you develop and improve ideas. Learn the tools used in the kind of design you enjoy.",
+    "activity": "Design two posters for the same school event: one for younger students and one for parents.",
+    "question": "How would your design change when the audience changes?",
+    "source": "https://www.bls.gov/ooh/arts-and-design/graphic-designers.htm",
+    "resourceQuery": "college"
+  },
+  {
+    "id": "civil-engineer",
+    "title": "Civil engineer",
+    "field": "engineering",
+    "icon": "bridge",
+    "summary": "Help shape the places we live, from bridges and roads to water systems and buildings.",
+    "interests": [
+      "build",
+      "solve",
+      "outdoors"
+    ],
+    "subjects": [
+      "Mathematics",
+      "Physics",
+      "Design & technology"
+    ],
+    "skills": [
+      "Spatial reasoning",
+      "Planning",
+      "Teamwork"
+    ],
+    "tasks": [
+      "Study a site, drawings and project constraints.",
+      "Develop designs and review materials or costs.",
+      "Coordinate construction work and check project standards."
+    ],
+    "route": "Explore civil engineering study, practical placements and any professional registration needed for your intended role and country.",
+    "activity": "Build two paper bridges with the same amount of paper. Compare how their shapes affect the number of coins they can support.",
+    "question": "Which design used its materials most effectively, and why?",
+    "source": "https://www.bls.gov/ooh/architecture-and-engineering/civil-engineers.htm",
+    "resourceQuery": "STEM"
+  },
+  {
+    "id": "teacher",
+    "title": "Secondary school teacher",
+    "field": "people",
+    "icon": "book",
+    "summary": "Help young people understand a subject, grow in confidence and discover what they can do.",
+    "interests": [
+      "help",
+      "create",
+      "lead"
+    ],
+    "subjects": [
+      "A subject you enjoy",
+      "English",
+      "Computing"
+    ],
+    "skills": [
+      "Explaining ideas",
+      "Patience",
+      "Organisation"
+    ],
+    "tasks": [
+      "Plan lessons around what students need to learn.",
+      "Teach, ask questions and adapt explanations.",
+      "Review work and give feedback that helps students improve."
+    ],
+    "route": "Investigate a subject or education degree, teacher training and supervised classroom experience. Check local certification requirements.",
+    "activity": "Teach a friend one idea in five minutes. Ask them to explain it back, then improve your explanation.",
+    "question": "How do you know whether someone has understood you?",
+    "source": "https://www.bls.gov/ooh/education-training-and-library/high-school-teachers.htm",
+    "resourceQuery": "college"
+  },
+  {
+    "id": "accountant",
+    "title": "Accountant",
+    "field": "business",
+    "icon": "chart",
+    "summary": "Make sense of financial records so people and organisations can make informed decisions.",
+    "interests": [
+      "solve",
+      "lead"
+    ],
+    "subjects": [
+      "Mathematics",
+      "Business studies",
+      "Economics"
+    ],
+    "skills": [
+      "Attention to detail",
+      "Analysis",
+      "Integrity"
+    ],
+    "tasks": [
+      "Check and organise financial information.",
+      "Prepare reports and explain what the numbers mean.",
+      "Identify financial risks or ways to improve operations."
+    ],
+    "route": "Explore accounting or related study and investigate professional qualifications relevant to your country and chosen specialism.",
+    "activity": "Create a fictional budget for a school club. Record income and expenses in a spreadsheet and explain one trade-off.",
+    "question": "What could a set of numbers reveal about a business?",
+    "source": "https://www.bls.gov/ooh/business-and-financial/accountants-and-auditors.htm",
+    "resourceQuery": "college"
+  },
+  {
+    "id": "biomedical-engineer",
+    "title": "Biomedical engineer",
+    "field": "engineering",
+    "icon": "pulse",
+    "summary": "Connect engineering with biology to develop and improve technology used in healthcare.",
+    "interests": [
+      "build",
+      "help",
+      "solve"
+    ],
+    "subjects": [
+      "Biology",
+      "Physics",
+      "Mathematics"
+    ],
+    "skills": [
+      "Design thinking",
+      "Scientific reasoning",
+      "Collaboration"
+    ],
+    "tasks": [
+      "Design or test medical technology and equipment.",
+      "Work with clinicians to understand a healthcare need.",
+      "Check performance, document findings and improve designs."
+    ],
+    "route": "Explore biomedical engineering or a related engineering degree. Look for design projects and placements in healthcare technology.",
+    "activity": "Sketch a device that makes an everyday task more accessible. Label the user’s need and three design features.",
+    "question": "How would you find out whether a design really helps its user?",
+    "source": "https://www.bls.gov/ooh/architecture-and-engineering/biomedical-engineers.htm",
+    "resourceQuery": "STEM"
+  },
+  {
+    "id": "data-scientist",
+    "title": "Data scientist",
+    "field": "technology",
+    "icon": "chart",
+    "summary": "Find patterns in data and turn them into explanations, predictions and better decisions.",
+    "interests": [
+      "solve",
+      "create"
+    ],
+    "subjects": [
+      "Mathematics",
+      "Statistics",
+      "Computing"
+    ],
+    "skills": [
+      "Critical thinking",
+      "Coding",
+      "Explaining evidence"
+    ],
+    "tasks": [
+      "Find useful data and organise it for analysis.",
+      "Build and test statistical or computational models.",
+      "Use charts and clear explanations to share findings."
+    ],
+    "route": "Explore mathematics, statistics, computing or related study. Practise analysing real datasets and explaining both results and limitations.",
+    "activity": "Use a public weather dataset to make one chart. Write down what it shows and one thing it cannot tell you.",
+    "question": "What evidence would make you change your first conclusion?",
+    "source": "https://www.bls.gov/ooh/math/data-scientists.htm",
+    "resourceQuery": "STEM"
+  },
+  {
+    "id": "physiotherapist",
+    "title": "Physiotherapist",
+    "field": "health",
+    "icon": "movement",
+    "summary": "Help people improve movement and function through assessment, rehabilitation and education.",
+    "interests": [
+      "help",
+      "solve",
+      "build"
+    ],
+    "subjects": [
+      "Biology",
+      "Physical education",
+      "Physics"
+    ],
+    "skills": [
+      "Observation",
+      "Empathy",
+      "Communication"
+    ],
+    "tasks": [
+      "Assess a person’s movement and discuss their goals.",
+      "Develop and adapt a rehabilitation plan.",
+      "Track progress and explain the recovery process."
+    ],
+    "route": "Explore an approved physiotherapy or physical therapy programme, clinical placements and local licensing. The degree route varies by country.",
+    "activity": "Research a physiotherapy setting, such as a sports clinic or hospital. Make a short poster about the professional’s role.",
+    "question": "Why might two people with similar injuries need different goals?",
+    "source": "https://www.bls.gov/ooh/healthcare/physical-therapists.htm",
+    "resourceQuery": "college"
+  },
+  {
+    "id": "psychologist",
+    "title": "Psychologist",
+    "field": "people",
+    "icon": "people",
+    "summary": "Study how people think, feel and behave, and use evidence to understand human experiences.",
+    "interests": [
+      "help",
+      "solve"
+    ],
+    "subjects": [
+      "Biology",
+      "Psychology",
+      "Mathematics"
+    ],
+    "skills": [
+      "Careful listening",
+      "Research",
+      "Ethical judgement"
+    ],
+    "tasks": [
+      "Ask research questions and gather evidence about behaviour.",
+      "Analyse patterns and explain findings.",
+      "Work in a chosen specialism, such as research, education or clinical practice."
+    ],
+    "route": "Explore psychology study and the further training required for your intended specialism. Many psychologist roles require advanced study and registration.",
+    "activity": "Read about one published psychology experiment. Identify its research question and one limitation, without testing or diagnosing anyone.",
+    "question": "How could you investigate a question about behaviour fairly?",
+    "source": "https://www.bls.gov/ooh/life-physical-and-social-science/psychologists.htm",
+    "resourceQuery": "college"
+  },
+  {
+    "id": "film-editor",
+    "title": "Film & video editor",
+    "field": "creative",
+    "icon": "film",
+    "summary": "Shape raw footage into a story through pacing, sequencing, sound and visual choices.",
+    "interests": [
+      "create",
+      "solve"
+    ],
+    "subjects": [
+      "Media studies",
+      "Art & design",
+      "English"
+    ],
+    "skills": [
+      "Storytelling",
+      "Attention to detail",
+      "Collaboration"
+    ],
+    "tasks": [
+      "Review footage and choose material for a story.",
+      "Arrange scenes, sound and transitions.",
+      "Work with a director or team to refine the final edit."
+    ],
+    "route": "Explore film, media or related training and make a portfolio of short edits. Practise storytelling alongside editing software.",
+    "activity": "Edit the same five clips into two short sequences: one calm and one exciting. Use your own or openly licensed footage.",
+    "question": "How can the order of two shots change their meaning?",
+    "source": "https://www.bls.gov/ooh/media-and-communication/film-and-video-editors-and-camera-operators.htm",
+    "resourceQuery": "college"
+  },
+  {
+    "id": "market-researcher",
+    "title": "Market research analyst",
+    "field": "business",
+    "icon": "search",
+    "summary": "Investigate what people need and want, helping organisations make better product decisions.",
+    "interests": [
+      "solve",
+      "lead",
+      "help"
+    ],
+    "subjects": [
+      "Business studies",
+      "Mathematics",
+      "English"
+    ],
+    "skills": [
+      "Research",
+      "Data analysis",
+      "Communication"
+    ],
+    "tasks": [
+      "Plan ways to gather useful customer information.",
+      "Study responses, competitors and market patterns.",
+      "Present findings and explain what they could mean for a business."
+    ],
+    "route": "Explore business, communications, social science or related study. Build research and statistics skills through small projects.",
+    "activity": "Ask five volunteers which school-club activity they prefer. Make an anonymous tally and explain why five answers may not represent everyone.",
+    "question": "What would you ask before creating a product for someone else?",
+    "source": "https://www.bls.gov/ooh/business-and-financial/market-research-analysts.htm",
+    "resourceQuery": "college"
+  },
+  {
+    "id": "lawyer",
+    "title": "Lawyer",
+    "field": "law",
+    "icon": "scales",
+    "summary": "Research legal questions, explain rights and responsibilities, and represent clients’ interests.",
+    "interests": [
+      "lead",
+      "help",
+      "solve"
+    ],
+    "subjects": [
+      "English",
+      "History",
+      "Government / civics"
+    ],
+    "skills": [
+      "Reasoning",
+      "Research",
+      "Clear writing"
+    ],
+    "tasks": [
+      "Listen to a client and investigate the facts.",
+      "Research legal issues and prepare documents.",
+      "Explain options or present an argument on a client’s behalf."
+    ],
+    "route": "Research the law degree or conversion route, professional training and admission rules in the jurisdiction where you want to practise.",
+    "activity": "Prepare both sides of a friendly debate about a school rule. Separate facts, opinions and assumptions.",
+    "question": "Can you explain the strongest argument against your own position?",
+    "source": "https://www.bls.gov/ooh/legal/lawyers.htm",
+    "resourceQuery": "college"
+  },
+  {
+    "id": "electrician",
+    "title": "Electrician",
+    "field": "hands-on",
+    "icon": "bolt",
+    "summary": "Install, maintain and troubleshoot the electrical systems that power homes and workplaces.",
+    "interests": [
+      "build",
+      "solve"
+    ],
+    "subjects": [
+      "Mathematics",
+      "Physics",
+      "Design & technology"
+    ],
+    "skills": [
+      "Practical problem solving",
+      "Precision",
+      "Safety awareness"
+    ],
+    "tasks": [
+      "Interpret technical diagrams and plan work.",
+      "Install or maintain electrical systems.",
+      "Test equipment and identify faults using approved procedures."
+    ],
+    "route": "Explore an apprenticeship or technical training route with supervised practical experience. Check local qualification and licensing requirements.",
+    "activity": "Use a virtual circuit simulator to connect a battery, switch and lamp. Explain what happens when the switch opens.",
+    "question": "How would you approach a fault methodically rather than guessing?",
+    "source": "https://www.bls.gov/ooh/construction-and-extraction/electricians.htm",
+    "resourceQuery": "college"
+  },
+  {
+    "id": "chef",
+    "title": "Chef",
+    "field": "hands-on",
+    "icon": "chef",
+    "summary": "Combine creativity, technique and teamwork to plan dishes and lead the preparation of food.",
+    "interests": [
+      "create",
+      "build",
+      "lead"
+    ],
+    "subjects": [
+      "Food studies",
+      "Mathematics",
+      "Business studies"
+    ],
+    "skills": [
+      "Organisation",
+      "Creativity",
+      "Teamwork"
+    ],
+    "tasks": [
+      "Develop recipes, menus and food presentation.",
+      "Coordinate a kitchen team and ingredients.",
+      "Maintain food quality, hygiene and safe working practices."
+    ],
+    "route": "Explore culinary training, apprenticeships or supervised kitchen experience. Leadership roles usually build on practical experience.",
+    "activity": "Plan a three-dish menu on a budget. Calculate ingredient costs and explain how you would avoid waste.",
+    "question": "How would you balance taste, cost and the needs of different diners?",
+    "source": "https://www.bls.gov/ooh/food-preparation-and-serving/chefs-and-head-cooks.htm",
+    "resourceQuery": "college"
+  },
+  {
+    "id": "agricultural-scientist",
+    "title": "Agricultural & food scientist",
+    "field": "planet",
+    "icon": "leaf",
+    "summary": "Investigate ways to grow food, care for resources and improve the quality of what we eat.",
+    "interests": [
+      "outdoors",
+      "solve",
+      "build"
+    ],
+    "subjects": [
+      "Biology",
+      "Chemistry",
+      "Mathematics"
+    ],
+    "skills": [
+      "Observation",
+      "Experiment design",
+      "Analysis"
+    ],
+    "tasks": [
+      "Research crops, soils, animals or food production.",
+      "Compare results from field or laboratory work.",
+      "Share findings that could improve quality, safety or resource use."
+    ],
+    "route": "Explore agricultural, food, plant or related sciences. Seek field or laboratory projects; some research roles need further study.",
+    "activity": "Grow two sets of seeds under different light conditions. Keep other conditions similar and record growth over a week.",
+    "question": "How would you make the comparison a fair test?",
+    "source": "https://www.bls.gov/ooh/life-physical-and-social-science/agricultural-and-food-scientists.htm",
+    "resourceQuery": "STEM"
+  },
+  {
+    "id": "environmental-scientist",
+    "title": "Environmental scientist",
+    "field": "planet",
+    "icon": "globe",
+    "summary": "Use evidence to understand environmental problems and help protect people and ecosystems.",
+    "interests": [
+      "outdoors",
+      "solve",
+      "help"
+    ],
+    "subjects": [
+      "Biology",
+      "Chemistry",
+      "Geography"
+    ],
+    "skills": [
+      "Scientific thinking",
+      "Field observation",
+      "Communication"
+    ],
+    "tasks": [
+      "Plan investigations and collect environmental information.",
+      "Analyse data to understand a problem.",
+      "Recommend actions and explain the evidence to others."
+    ],
+    "route": "Explore environmental or other natural sciences and build fieldwork, data and report-writing skills. Requirements depend on the role.",
+    "activity": "Observe litter in a safe public area without handling it. Record categories and propose one change to reduce it.",
+    "question": "What evidence would show whether your proposed change worked?",
+    "source": "https://www.bls.gov/ooh/life-physical-and-social-science/environmental-scientists-and-specialists.htm",
+    "resourceQuery": "STEM"
+  },
+  {
+    "id": "pilot",
+    "title": "Pilot",
+    "field": "aviation",
+    "icon": "plane",
+    "summary": "Plan and operate flights, using careful preparation, teamwork and navigation to move people or cargo.",
+    "interests": [
+      "build",
+      "solve",
+      "lead"
+    ],
+    "subjects": [
+      "Mathematics",
+      "Physics",
+      "English"
+    ],
+    "skills": [
+      "Decision making",
+      "Situational awareness",
+      "Communication"
+    ],
+    "tasks": [
+      "Check flight plans, aircraft information and weather.",
+      "Coordinate with crew and air traffic control.",
+      "Operate and monitor the aircraft throughout a flight."
+    ],
+    "route": "Research approved flight training, medical standards, licences and experience requirements with your country’s aviation regulator. Routes differ for commercial and airline roles.",
+    "activity": "Draw a route between two cities. Use a map scale to estimate distance, then research how weather might affect planning.",
+    "question": "Why is preparation as important as controlling the aircraft?",
+    "source": "https://www.bls.gov/ooh/transportation-and-material-moving/airline-and-commercial-pilots.htm",
+    "resourceQuery": "college"
+  }
+]

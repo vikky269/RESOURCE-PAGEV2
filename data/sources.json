@@ -1,0 +1,77 @@
+[
+  {
+    "provider": "University of Maryland",
+    "url": "https://admissions.umd.edu/apply/application-deadlines",
+    "state": "MD"
+  },
+  {
+    "provider": "SUNY",
+    "url": "https://www.suny.edu/attend/apply-to-suny/",
+    "state": "NY"
+  },
+  {
+    "provider": "Johns Hopkins Engineering",
+    "url": "https://engineering.jhu.edu/outreach/ceo-programs/wise/wise-application/",
+    "state": "MD"
+  },
+  {
+    "provider": "Maryland Association of Student Councils",
+    "url": "https://mdstudentcouncils.org/index.php/fall-leadership-conference/",
+    "state": "MD"
+  },
+  {
+    "provider": "Natural Areas Conservancy",
+    "url": "https://naturalareasnyc.org/high-school-internship/",
+    "state": "NY"
+  },
+  {
+    "provider": "New York State Education Department",
+    "url": "https://www.nysed.gov/postsecondary-services/scholarships-academic-excellence-sae",
+    "state": "NY"
+  },
+  {
+    "provider": "Johns Hopkins Medicine",
+    "url": "https://www.hopkinsmedicine.org/human-resources/learning-development/youth/summer-jobs/application",
+    "state": "MD"
+  },
+  {
+    "provider": "CUNY",
+    "url": "https://www.cuny.edu/admissions/undergraduate/apply/",
+    "state": "NY"
+  },
+  {
+    "provider": "UMD Geographical Sciences",
+    "url": "https://geog.umd.edu/high-school-hub/high-school-internship-program-hip",
+    "state": "MD"
+  },
+  {
+    "provider": "New York HESC / SUNY",
+    "url": "https://www.suny.edu/suny-news/press-releases/10-26/10-13-26-2/",
+    "state": "NY"
+  },
+  {
+    "provider": "Maryland Higher Education Commission",
+    "url": "https://mhec.maryland.gov/Pages/default.aspx",
+    "state": "MD"
+  },
+  {
+    "provider": "University at Albany",
+    "url": "https://www.albany.edu/uhs/science-research-program/ualbany-in-the-high-school-science-research-symposium",
+    "state": "NY"
+  },
+  {
+    "provider": "Maryland STEM Festival",
+    "url": "https://marylandstemfestival.org/find-events/",
+    "state": "MD"
+  },
+  {
+    "provider": "Common App",
+    "url": "https://www.commonapp.org/apply/first-year-students/",
+    "state": "National"
+  },
+  {
+    "provider": "NASA",
+    "url": "https://www.nasa.gov/learning-resources/internship-programs/",
+    "state": "National"
+  }
+]

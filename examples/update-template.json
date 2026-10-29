@@ -1,0 +1,9 @@
+{
+  "runId": "replace-with-a-stable-id-for-this-reviewed-batch",
+  "upserts": [],
+  "run": {
+    "status": "partial",
+    "sourcesChecked": 0,
+    "notes": "Template only. No sources have been reviewed. Replace before use."
+  }
+}
