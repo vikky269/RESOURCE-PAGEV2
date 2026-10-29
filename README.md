@@ -12,21 +12,24 @@ Use Node.js 24 and npm. Deploy the **whole source project**, including its Netli
 2. Run `npm ci`, `npm test`, then `npm run build`.
 3. Put the project in a Git repository you control, keeping `.env`, `node_modules`, `.netlify` and `dist` untracked. Import that repository into Netlify.
 4. Netlify reads [netlify.toml](netlify.toml). The build command is `npm run build`, the publish directory is `dist`, and the functions directory is `netlify/functions`. Leave the base directory blank if these files are at the repository root.
-5. Before deployment, set `SMARTMATHZ_UPDATE_TOKEN` in Netlify **Project configuration → Environment variables**. If scope selection is available, include **Functions**. Redeploy after changing values.
-6. Deploy from Netlify. Open `/`, `/resources/`, or `/careers/` — the site is public (no login).
+5. Before deployment, set the Netlify **Environment variables** below (include **Functions** scope if offered). Redeploy after changing values.
+6. Deploy from Netlify. Open `/`, `/resources/`, or `/careers/` — the site is public (no login). Connect ChatGPT via OAuth MCP at `/mcp` (see [CHATGPT-SCHEDULE.md](CHATGPT-SCHEDULE.md)).
 
 | Variable | Purpose | Required value |
 | --- | --- | --- |
-| `SMARTMATHZ_UPDATE_TOKEN` | Administrative bearer token for catalog updates | A random secret, at least 32 characters |
-| `SMARTMATHZ_VIEWER_PASSWORD` | Unused (legacy) | Optional; pages no longer require it |
+| `SMARTMATHZ_UPDATE_TOKEN` | Server-only catalog writer | Random secret ≥ 32 characters |
+| `SMARTMATHZ_OPERATOR_PASSWORD` | OAuth authorize page for ChatGPT | Random secret ≥ 16 characters |
+| `SMARTMATHZ_OAUTH_JWE_SECRET` | Seals OAuth codes and access tokens | Random secret ≥ 32 characters |
+| `SMARTMATHZ_SITE_URL` | Public origin for OAuth metadata | e.g. `https://resource-page-v2.netlify.app` |
+| `SMARTMATHZ_VIEWER_PASSWORD` | Unused (legacy) | Optional |
 
-Generate the update token with `node -e "console.log(require('node:crypto').randomBytes(32).toString('hex'))"`. Store it in your password manager and Netlify, never in a committed file or browser JavaScript.
+Generate secrets with `node -e "console.log(require('node:crypto').randomBytes(32).toString('hex'))"`. Store them in your password manager and Netlify, never in a committed file or browser JavaScript. Never paste `SMARTMATHZ_UPDATE_TOKEN` into ChatGPT.
 
-Pages and catalog reads are public. Catalog writes stay disabled when the update token is missing or too short.
+Pages and catalog reads are public. Catalog HTTP writes stay disabled when the update token is missing or too short. ChatGPT scheduled publishing uses the OAuth MCP connector instead of that token.
 
 ## Run locally
 
-Copy [.env.example](.env.example) to `.env`, set `SMARTMATHZ_UPDATE_TOKEN` (32+ characters), then run:
+Copy [.env.example](.env.example) to `.env`, set `SMARTMATHZ_UPDATE_TOKEN`, `SMARTMATHZ_OPERATOR_PASSWORD`, and `SMARTMATHZ_OAUTH_JWE_SECRET`, then run:
 
 ```sh
 npm ci
@@ -43,10 +46,10 @@ This repository supplies a writer and research instructions, not an autonomous s
 
 To connect daily updates after deployment:
 
-1. Verify the Netlify URL, public page load, `/api/catalog` read, authenticated write and persistent readback.
-2. Give the updater the Netlify origin and `SMARTMATHZ_UPDATE_TOKEN` through an approved secret mechanism. Never reuse a ChatGPT Sites service token.
-3. Change the existing ChatGPT task destination to this site (or configure another scheduler) to follow `/api/updater-guide`. Avoid running two writers for the same live catalog.
-4. Enable the catalog's `automation` metadata only after that schedule is configured and verified. Setting the metadata alone does not create a schedule.
+1. Confirm ChatGPT → Plugins → Add custom MCP server is available on your account.
+2. Set operator + OAuth secrets in Netlify and redeploy. MCP URL: `https://resource-page-v2.netlify.app/mcp`.
+3. Connect the plugin with **OAuth**, authorize with the operator password, and test `get_catalog` / `apply_catalog_update`.
+4. Point the 8:00 AM Africa/Lagos task at the plugin (not a pasted update token). Enable `automation` metadata only after a successful automated write.
 
 Detailed source rules and the record schema live in [data/updater-guide.json](data/updater-guide.json). The initial official provider list is [data/sources.json](data/sources.json).
 
@@ -90,9 +93,13 @@ After a hosted write, `/api/catalog` should show `storage: "persisted"` and the 
 | `server/catalog-core.mjs` | Catalog validation, revision merge and history behavior |
 | `server/netlify-store.mjs` | Netlify Blobs storage adapter |
 | `server/access.mjs` | Public reads; updater authorization for writes |
-| `netlify/functions/site.mjs` | Hosted page gateway and catalog API |
+| `server/oauth/` | OAuth 2.1 metadata, authorize, token, DCR |
+| `server/mcp-tools.mjs` | ChatGPT MCP catalog tools |
+| `netlify/functions/site.mjs` | Hosted page gateway and catalog API (`/*`) |
+| `netlify/functions/oauth.mjs` | `/.well-known/*` and `/oauth/*` |
+| `netlify/functions/mcp.mjs` | Streamable HTTP MCP at `/mcp` |
 | `server/site-handler.mjs` | Page and asset gateway |
-| `CHATGPT-SCHEDULE.md` | How to point the daily ChatGPT task at Netlify |
+| `CHATGPT-SCHEDULE.md` | ChatGPT Plugins OAuth connect + daily task |
 | `scripts/update-catalog.mjs` | Reviewed-batch client with readback verification |
 | `data/` | Catalog snapshot, official sources and updater instructions |
 | `tests/catalog.test.mjs` | Access, validation, persistence, retry and race checks |

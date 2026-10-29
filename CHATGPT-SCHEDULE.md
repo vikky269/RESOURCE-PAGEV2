@@ -1,47 +1,53 @@
-# Connect the daily ChatGPT task to Netlify
+# Connect ChatGPT to Smartmathz (OAuth MCP)
 
-Live site: **https://resource-page-v2.netlify.app/**
+Live site: **https://resource-page-v2.netlify.app/**  
+MCP endpoint: **https://resource-page-v2.netlify.app/mcp**
 
-The site is public. Only catalog **writes** need `SMARTMATHZ_UPDATE_TOKEN`. Netlify does not scrape sources on its own — your ChatGPT scheduled task (or another agent) must call this deployment each day.
+The site is public. Catalog **writes** never expose `SMARTMATHZ_UPDATE_TOKEN` to ChatGPT. ChatGPT connects with **OAuth**, then calls MCP tools; the server applies updates with the Netlify-held update token.
 
-## 1. Secrets (never commit these)
+## 0. Prerequisite — confirm Plugins access
 
-In Netlify → Site configuration → Environment variables (Functions scope):
+Before relying on the daily task:
 
-| Variable | Required |
-| --- | --- |
-| `SMARTMATHZ_UPDATE_TOKEN` | Yes — random secret ≥ 32 characters |
-| `SMARTMATHZ_VIEWER_PASSWORD` | No longer required (public site) |
+1. Open ChatGPT on the web.
+2. Go to **Plugins** → **+** → **Add custom MCP server**.
+3. If that option is missing, your plan/workspace cannot install this connector yet. The MCP server can still be deployed; publishing will need Plugins access or another publisher (for example a GitHub Action that holds the update token).
 
-In the ChatGPT task / agent secret store, set:
+## 1. Netlify environment variables
 
-- `SMARTMATHZ_SITE_URL` = `https://resource-page-v2.netlify.app`
-- `SMARTMATHZ_UPDATE_TOKEN` = the **same** value as Netlify
+| Variable | Required | Purpose |
+| --- | --- | --- |
+| `SMARTMATHZ_UPDATE_TOKEN` | Yes | Server-only catalog writer (≥ 32 chars). Never give to ChatGPT. |
+| `SMARTMATHZ_OPERATOR_PASSWORD` | Yes | Operator password on the OAuth authorize page (≥ 16 chars). |
+| `SMARTMATHZ_OAUTH_JWE_SECRET` | Yes | Seals OAuth codes/tokens (≥ 32 chars). |
+| `SMARTMATHZ_SITE_URL` | Recommended | `https://resource-page-v2.netlify.app` (issuer / resource origin). |
+| `SMARTMATHZ_VIEWER_PASSWORD` | No | Unused (public site). |
 
-Do not reuse an old ChatGPT Sites service token.
+Generate secrets locally; set them in Netlify → Environment variables (Functions scope); redeploy.
 
-## 2. Retarget the existing 8:00 AM Africa/Lagos task
+## 2. Connect in ChatGPT Plugins
 
-Change the task destination from the private ChatGPT Site to this Netlify origin. Avoid running two writers against two live catalogs.
+1. Plugins → Add custom MCP server.
+2. Name: `Smartmathz` (or similar).
+3. Server URL: `https://resource-page-v2.netlify.app/mcp`
+4. Authentication: **OAuth**.
+5. Acknowledge the risk warning → Create as a plugin.
+6. Complete the operator login with `SMARTMATHZ_OPERATOR_PASSWORD`.
+7. Install the plugin. Manually test `@Smartmathz` → `get_catalog`, then a small `apply_catalog_update` if needed.
+
+## 3. Daily 8:00 AM Africa/Lagos task
+
+Point the scheduled task at this **plugin**, not at raw HTTP with a pasted token.
 
 Each run should:
 
-1. `GET https://resource-page-v2.netlify.app/api/updater-guide` with `Authorization: Bearer <SMARTMATHZ_UPDATE_TOKEN>`
-2. `GET https://resource-page-v2.netlify.app/api/catalog` (public; bearer also fine)
-3. Review official sources per the guide (`data/sources.json` + each record’s `sourceUrl`)
-4. Build a batch (`runId`, `expectedRevision`, `upserts`, `run`) — see `examples/update-template.json`
-5. `POST https://resource-page-v2.netlify.app/api/catalog/update` with JSON body and the bearer token
-6. `GET /api/catalog` again and confirm `storage` is `persisted`, revision advanced, and `lastRun.id` matches `runId`
+1. Call `get_updater_guide`
+2. Call `get_catalog` (keep `revision`)
+3. Review official sources (web research) per the guide
+4. Call `apply_catalog_update` with `{ runId, expectedRevision, upserts, run, automation? }`
+5. Call `get_catalog` or `get_feed_status` and confirm `storage` is `persisted` and `lastRun.id` matches `runId`
 
-Optional local dry-run after a reviewed batch file:
-
-```sh
-SMARTMATHZ_SITE_URL=https://resource-page-v2.netlify.app SMARTMATHZ_UPDATE_TOKEN=... npm run update:catalog -- path/to/reviewed-batch.json
-```
-
-## 3. Mark automation connected
-
-Only after a successful scheduled write, include in a verified update batch:
+After a successful automated write, include:
 
 ```json
 "automation": {
@@ -52,11 +58,12 @@ Only after a successful scheduled write, include in a verified update batch:
 }
 ```
 
-Setting this metadata alone does not create a schedule.
+Setting automation metadata alone does not create a schedule.
 
 ## 4. Smoke checks
 
-- Open https://resource-page-v2.netlify.app/ — no username/password
-- https://resource-page-v2.netlify.app/resources/ and `/careers/` load
+- https://resource-page-v2.netlify.app/ opens with no login
 - https://resource-page-v2.netlify.app/api/feed-status returns JSON
-- A token-authenticated POST update succeeds and readback shows `persisted`
+- Unauthenticated `POST /mcp` returns 401 with `WWW-Authenticate` resource metadata
+- After OAuth connect, `get_catalog` works from ChatGPT
+- `apply_catalog_update` persists without ChatGPT ever seeing `SMARTMATHZ_UPDATE_TOKEN`

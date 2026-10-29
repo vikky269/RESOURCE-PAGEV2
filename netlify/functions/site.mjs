@@ -19,6 +19,8 @@ export default async function site(request) {
   };
   return handle(request, {BUCKET:lazyBucket,UPDATE_TOKEN:process.env.SMARTMATHZ_UPDATE_TOKEN,VIEWER_PASSWORD:process.env.SMARTMATHZ_VIEWER_PASSWORD});
 }
+// OAuth well-known + /oauth/* and /mcp are served by dedicated functions
+// (oauth.mjs, mcp.mjs). Those more-specific paths take precedence over this catch-all.
 export const config = {
   path: '/*',
   preferStatic: false

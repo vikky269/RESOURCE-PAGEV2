@@ -13,7 +13,9 @@
     "update:catalog": "node scripts/update-catalog.mjs"
   },
   "dependencies": {
-    "@netlify/blobs": "11.1.7"
+    "@modelcontextprotocol/sdk": "^1.32.2",
+    "@netlify/blobs": "11.1.7",
+    "zod": "^4.6.7"
   },
   "devDependencies": {
     "netlify-cli": "27.15.0"
