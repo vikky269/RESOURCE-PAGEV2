@@ -29,16 +29,19 @@ export async function isViewer(request, settings) {
   } catch { return false; }
 }
 
-export function accessDenied(configured) {
-  return new Response(configured ? 'This Smartmathz preview is private. Sign in with the shared preview credentials.' : 'Private preview setup is incomplete. Configure SMARTMATHZ_VIEWER_PASSWORD in Netlify and redeploy.', {
+export function updateDenied(configured) {
+  return new Response(configured ? 'A valid updater bearer token is required to change the catalog.' : 'Catalog updates are disabled. Configure SMARTMATHZ_UPDATE_TOKEN in Netlify and redeploy.', {
     status: configured ? 401 : 503,
-    headers: {'content-type':'text/plain; charset=utf-8','cache-control':'private, no-store','vary':'Authorization',...(configured ? {'www-authenticate':'Basic realm="Smartmathz private preview", charset="UTF-8"'} : {})}
+    headers: {'content-type':'text/plain; charset=utf-8','cache-control':'private, no-store','vary':'Authorization'}
   });
 }
 
+/** Pages and catalog reads are public. Only POST /api/catalog/update requires the updater token. */
 export async function protectRequest(request, settings, next) {
   const path = new URL(request.url).pathname;
-  if (API_PATHS.has(path) && await isUpdater(request, settings)) return next();
-  if (await isViewer(request, settings)) return next();
-  return accessDenied(typeof settings.viewerPassword === 'string' && settings.viewerPassword.length >= 16);
+  if (path === '/api/catalog/update') {
+    if (await isUpdater(request, settings)) return next();
+    return updateDenied(typeof settings.updateToken === 'string' && settings.updateToken.length >= 32);
+  }
+  return next();
 }

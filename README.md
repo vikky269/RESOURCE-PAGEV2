@@ -12,40 +12,40 @@ Use Node.js 24 and npm. Deploy the **whole source project**, including its Netli
 2. Run `npm ci`, `npm test`, then `npm run build`.
 3. Put the project in a Git repository you control, keeping `.env`, `node_modules`, `.netlify` and `dist` untracked. Import that repository into Netlify.
 4. Netlify reads [netlify.toml](netlify.toml). The build command is `npm run build`, the publish directory is `dist`, and the functions directory is `netlify/functions`. Leave the base directory blank if these files are at the repository root.
-5. Before deployment, set the two private variables below in Netlify **Project configuration → Environment variables**. If scope selection is available, include **Functions**. Set production values deliberately; leave previews unconfigured or give them separate test values. Redeploy after changing values.
-6. Deploy from Netlify. Open `/` or `/resources/` and sign in with username **smartmathz** and your viewer password. `/careers/` opens Career Explorer.
+5. Before deployment, set `SMARTMATHZ_UPDATE_TOKEN` in Netlify **Project configuration → Environment variables**. If scope selection is available, include **Functions**. Redeploy after changing values.
+6. Deploy from Netlify. Open `/`, `/resources/`, or `/careers/` — the site is public (no login).
 
 | Variable | Purpose | Required value |
 | --- | --- | --- |
-| `SMARTMATHZ_VIEWER_PASSWORD` | Shared private preview access | A unique random password, at least 16 characters |
-| `SMARTMATHZ_UPDATE_TOKEN` | Administrative bearer token for catalog updates | A different random secret, at least 32 characters |
+| `SMARTMATHZ_UPDATE_TOKEN` | Administrative bearer token for catalog updates | A random secret, at least 32 characters |
+| `SMARTMATHZ_VIEWER_PASSWORD` | Unused (legacy) | Optional; pages no longer require it |
 
-Generate each secret separately on your own computer with `node -e "console.log(require('node:crypto').randomBytes(32).toString('hex'))"`. Store the results in your password manager and Netlify, never in a committed file or browser JavaScript.
+Generate the update token with `node -e "console.log(require('node:crypto').randomBytes(32).toString('hex'))"`. Store it in your password manager and Netlify, never in a committed file or browser JavaScript.
 
-The site stays closed when the viewer password is missing or too short. The updater is disabled when its token is missing or too short. The shared password gate preserves private preview access; it does not provide individual student accounts, roles, or the original ChatGPT account allowlist.
+Pages and catalog reads are public. Catalog writes stay disabled when the update token is missing or too short.
 
 ## Run locally
 
-Copy [.env.example](.env.example) to `.env`, fill in the two secrets with local test values, then run:
+Copy [.env.example](.env.example) to `.env`, set `SMARTMATHZ_UPDATE_TOKEN` (32+ characters), then run:
 
 ```sh
 npm ci
 npm run dev
 ```
 
-Open the URL printed by Netlify Dev and use the preview credentials above. `npm run dev` builds before starting. Restart it after changing source files. Netlify Dev supplies local service emulation; a successful local test does not prove your hosted Netlify environment has been configured.
+Open the URL printed by Netlify Dev. `npm run dev` builds before starting. Restart it after changing source files. Netlify Dev supplies local service emulation; a successful local test does not prove your hosted Netlify environment has been configured.
 
 ## How daily updates work
 
-The existing daily task lives in ChatGPT and is enabled for **8:00 AM Africa/Lagos**. It reviews official university, government, employer and programme organiser pages; verifies the current cycle, student eligibility and deadline; merges changes by stable ID; and reads back the saved catalog. It can run while nobody has the site open. It updates the existing private ChatGPT Site, **not this Netlify copy**.
+Point your ChatGPT daily task (or another agent) at this Netlify deployment. Step-by-step wiring for **https://resource-page-v2.netlify.app/** is in [CHATGPT-SCHEDULE.md](CHATGPT-SCHEDULE.md).
 
-This repository supplies a writer and research instructions, not an autonomous scholarship scraper or an installed Netlify schedule. The catalog marks automatic checks as disconnected until a real scheduler is connected to this deployment. A daily check may find no new opportunities. If a source fails, retain its last successfully verified facts and show the failure honestly.
+This repository supplies a writer and research instructions, not an autonomous scholarship scraper or an installed Netlify schedule. The catalog marks automatic checks as disconnected until a real scheduler is connected. A daily check may find no new opportunities. If a source fails, retain its last successfully verified facts and show the failure honestly.
 
-To migrate the task after deployment:
+To connect daily updates after deployment:
 
-1. Verify the Netlify URL, private access gate, `/api/catalog` read, authenticated write and persistent readback.
-2. Give the updater the Netlify origin and token through an approved secret mechanism. Never reuse the private ChatGPT Sites service token.
-3. Explicitly change the existing task's destination or configure an external agent/scheduler to follow `/api/updater-guide`. Avoid running two writers for the same catalog. This export does not change or pause your existing task.
+1. Verify the Netlify URL, public page load, `/api/catalog` read, authenticated write and persistent readback.
+2. Give the updater the Netlify origin and `SMARTMATHZ_UPDATE_TOKEN` through an approved secret mechanism. Never reuse a ChatGPT Sites service token.
+3. Change the existing ChatGPT task destination to this site (or configure another scheduler) to follow `/api/updater-guide`. Avoid running two writers for the same live catalog.
 4. Enable the catalog's `automation` metadata only after that schedule is configured and verified. Setting the metadata alone does not create a schedule.
 
 Detailed source rules and the record schema live in [data/updater-guide.json](data/updater-guide.json). The initial official provider list is [data/sources.json](data/sources.json).
@@ -76,7 +76,7 @@ API clients send `Authorization: Bearer <SMARTMATHZ_UPDATE_TOKEN>`. The token is
 
 ## Data storage and deployment contexts
 
-The catalog uses Netlify Blobs with strongly consistent reads, conditional writes, revision checks and history snapshots. All pages and assets are served through a password-protected Netlify Function. The publish directory contains only a closed fallback page so static-only deployment does not expose the application. The bundled seed is used until the first persisted write; future deployments preserve the live stored catalog instead of overwriting it with the seed.
+The catalog uses Netlify Blobs with strongly consistent reads, conditional writes, revision checks and history snapshots. Pages and assets are served through a Netlify Function (public reads; token-protected writes). The publish directory contains only a fallback page so static-only deployment does not expose the application. The bundled seed is used until the first persisted write; future deployments preserve the live stored catalog instead of overwriting it with the seed.
 
 The build chooses the store in `data/runtime-config.json`. Production uses `smartmathz-opportunities`; previews and local builds use a separate namespace. Run the normal Netlify build in the intended context. Do not hand-edit runtime configuration to point a preview at production.
 
@@ -89,9 +89,10 @@ After a hosted write, `/api/catalog` should show `storage: "persisted"` and the 
 | `public/` | Editable homepage, resources, careers, CSS, JS and image/font assets |
 | `server/catalog-core.mjs` | Catalog validation, revision merge and history behavior |
 | `server/netlify-store.mjs` | Netlify Blobs storage adapter |
-| `server/access.mjs` | Shared viewer/updater authorization |
+| `server/access.mjs` | Public reads; updater authorization for writes |
 | `netlify/functions/site.mjs` | Hosted page gateway and catalog API |
-| `server/site-handler.mjs` | Password-protected page and asset gateway |
+| `server/site-handler.mjs` | Page and asset gateway |
+| `CHATGPT-SCHEDULE.md` | How to point the daily ChatGPT task at Netlify |
 | `scripts/update-catalog.mjs` | Reviewed-batch client with readback verification |
 | `data/` | Catalog snapshot, official sources and updater instructions |
 | `tests/catalog.test.mjs` | Access, validation, persistence, retry and race checks |

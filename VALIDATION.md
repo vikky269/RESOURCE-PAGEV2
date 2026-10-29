@@ -12,4 +12,4 @@ Validated on 29 October 2026 using Node.js 24.22.1 and Netlify CLI 27.15.0.
 
 The storage-adapter tests use an in-memory implementation; the client test uses a local HTTP fixture. This export has not been deployed to Netlify, and hosted Netlify Blobs access has not been exercised. Verify private access and an authenticated catalog write/readback after you deploy.
 
-The existing private Smartmathz deployment and its daily task were not changed during this export. The Netlify copy starts with automatic updates marked disconnected until you deliberately configure its updater.
+The existing private Smartmathz deployment and its daily task were not changed during this export. The Netlify copy starts with automatic updates marked disconnected until you deliberately configure its updater. Pages are public; only catalog writes require `SMARTMATHZ_UPDATE_TOKEN`. See CHATGPT-SCHEDULE.md.

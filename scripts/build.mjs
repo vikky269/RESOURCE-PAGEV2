@@ -25,7 +25,7 @@ for(const file of ['/index.html','/resources/index.html','/careers/index.html'])
 await writeFile('data/asset-manifest.json',JSON.stringify(assets));
 await rm('dist',{recursive:true,force:true});
 await mkdir('dist',{recursive:true});
-// Never expose unprotected application assets through a static-only deployment.
-const fallback='<!doctype html><meta charset="utf-8"><meta name="robots" content="noindex"><title>Private deployment setup</title><h1>Private deployment unavailable</h1><p>Deploy the complete Netlify project, including its server function, to open this private preview.</p>';
+// Application assets are served by the Netlify Function; static-only deploys show this fallback.
+const fallback='<!doctype html><meta charset="utf-8"><meta name="robots" content="noindex"><title>Deployment setup</title><h1>Site unavailable</h1><p>Deploy the complete Netlify project, including its server function, to open this site.</p>';
 await writeFile('dist/index.html',fallback);await writeFile('dist/404.html',fallback);
-console.log('Built '+Object.keys(assets).length+' private application assets and isolated catalog configuration ('+context+').');
+console.log('Built '+Object.keys(assets).length+' application assets and isolated catalog configuration ('+context+').');
